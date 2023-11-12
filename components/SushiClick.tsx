@@ -13,8 +13,8 @@ const SushiClick = () => {
     const jsConfetti = new JSConfetti();
 
     const handleOnClick = (event:MouseEvent) => {
-      const x = event.clientX - 29;
-      const y = event.clientY - 42;
+      const x = event.clientX - 94;
+      const y = event.clientY - 30;
       setCoordinates({ x, y });
       setLocations((prevLocations) => [...prevLocations, { x, y, id: prevLocations.length + 1 }]);
       setClickCount((prevCount) => prevCount + 1);
@@ -53,10 +53,10 @@ const SushiClick = () => {
       {locations.map((location) => (
         <div key={location.id} style={{ position: 'absolute', top: location.y, left: location.x }}>
           <Image
-            src="/kwaji.png" 
+            src="/hip-rose160px.png" 
             alt="kwaji"
-            width={69} 
-            height={69} 
+            width={160} 
+            height={60} 
           />
         </div>
       ))}
